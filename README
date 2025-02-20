@@ -1,0 +1,94 @@
+MolecularJS Boilerplate with Azure AD Authentication
+This is a MolecularJS boilerplate for building scalable and modular Node.js applications. It includes:
+
+Express for handling HTTP requests.
+
+TypeScript for type safety and better developer experience.
+
+Jest for unit and integration testing.
+
+Swagger UI for API documentation.
+
+Azure AD Authentication using @azure/msal-node.
+
+ESLint and Prettier for code quality and formatting.
+
+Features
+Modular Structure:
+
+The application is organized into application, domain, and infrastructure layers for better separation of concerns.
+
+Each module is self-contained and can be easily extended or replaced.
+
+Azure AD Authentication:
+
+Integrated with Azure AD using the @azure/msal-node package.
+
+Supports login, token validation, and fetching user profile data from Microsoft Graph.
+
+Swagger API Documentation:
+
+Interactive API documentation is available at /api-docs.
+
+Endpoints are annotated with Swagger comments for automatic documentation generation.
+
+Testing:
+
+Unit and integration tests are written using Jest.
+
+Test coverage reports are generated using jest --coverage.
+
+Environment Configuration:
+
+Environment variables are managed using .env and dotenv.
+
+A .env.template file is provided for easy setup.
+
+Code Quality:
+
+ESLint is used for linting, and Prettier is used for code formatting.
+
+Linting rules are configured to enforce best practices.
+
+Folder Structure
+Copy
+node-azure-auth-server/
+├── .env
+├── .env.template
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
+├── .nvmrc
+├── .prettierignore
+├── .prettierrc
+├── jest.config.ts
+├── package.json
+├── tsconfig.json
+├── src/
+│   ├── application/
+│   │   ├── controllers/
+│   │   └── dtos/
+│   ├── domain/
+│   │   ├── decorators/
+│   │   ├── entities/
+│   │   ├── enums/
+│   │   │   └── httpResponse
+│   │   ├── exceptions/
+│   │   ├── guards/
+│   │   ├── helpers/
+│   │   ├── interceptors/
+│   │   ├── interfaces/
+│   │   ├── modules/
+│   │   │   └── common
+│   │   ├── pipes/
+│   │   └── services/
+│   │       └── common
+│   └── infrastructure/
+│       ├── config/
+│       └── modules/
+│           └── common
+└── __test__/
+    ├── controllers/
+    ├── e2e/
+    ├── factories/
+    └── service
